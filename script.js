@@ -12,7 +12,7 @@
       const release = data[0];
       const tag = release.tag_name ?? '';
       const date = release.published_at
-        ? new Date(release.published_at).toLocaleString('en', { month: 'short', year: 'numeric' })
+        ? new Date(release.published_at).toLocaleString('en', { day: 'numeric', month: 'short', year: 'numeric' })
         : '';
       setVersion(tag + (date ? ' \u00b7 ' + date : ''));
     } catch {
